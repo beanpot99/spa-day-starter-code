@@ -6,6 +6,10 @@
 </head>
 <body>
 <p th:text="'Hello ' + ${user.username} + '!'"></p>
+<h3>All Spa Customers</h3>
+<ul>
+    <li th:each="usere : ${users}" th:text="${usere.getName}"><a th:href="@{/user/detail}"></a></li>
+</ul>
 <a th:href="@{/}">Select your spa services here!</a>
 </body>
 </html>
